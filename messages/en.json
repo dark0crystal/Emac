@@ -6,12 +6,15 @@
   },
   "cards": {
     "card1": {
+      "title":"",
       "paragraph": "We excel in delivering innovative electrical and mechanical solutions."
     },
     "card2": {
+      "title":"",
       "paragraph": "Our services meet your needs in air conditioning repair and installation with efficiency and reliability."
     },
     "card3": {
+      "title":"",
       "paragraph": "We are committed to quality and professionalism in executing complex electrical works."
     }
   }
