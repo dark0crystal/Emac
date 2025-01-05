@@ -4,7 +4,7 @@ export default function ContactUs(){
     return(
         <div>
             <div className="bg-violet-400 px-6 py-3 rounded-full">
-                <Link href="/about">إحجز موعد</Link>
+                <Link href="/about" className="text-lg font-normal">احجز موعد</Link>
             </div>
         </div>
     )
