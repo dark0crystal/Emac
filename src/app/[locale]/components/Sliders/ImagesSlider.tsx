@@ -17,7 +17,9 @@ export default function ImagesSlider() {
   ];
 
   return (
-    <div className="relative h-full  overflow-hidden">
+    <div className="relative h-full overflow-hidden -z-20">
+      <div className="absolute z-20 h-[20vh]  w-full top-0 bg-[linear-gradient(circle_1000px_at_0%_100%,#133E87,transparent)]">
+
       <motion.div
         className="absolute flex flex-col"
         initial={{ y: 0 }}
@@ -57,6 +59,7 @@ export default function ImagesSlider() {
         ))} */}
         
       </motion.div>
+      </div>
     </div>
   );
 }
