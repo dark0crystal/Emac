@@ -49,9 +49,12 @@ export default function HomePage() {
         {/* first section End  */}
 
 
-        <div className='h-[80vh]'>
+       <div>
           <OurProjects/>
-        </div>
+       </div>
+          
+       
+
         <div className='h-[70vh] bg-[#608BC1]'>
           <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
