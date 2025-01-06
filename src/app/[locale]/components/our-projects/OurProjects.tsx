@@ -51,13 +51,16 @@ export default function OurProjects() {
             </div>
             <div className="absolute h-fit w-[95%] bg-white/80 p-4 rounded-3xl bottom-4 flex flex-row justify-between items-center">
                 
+               
+                <div className="">
+                    <h3 className="">{project.title}</h3>
+                    <p className="text-gray-600 mt-2 text-start">{project.description}</p>
+                </div>
+
                 <div>
                     <MdArrowOutward />
                 </div>
-                <div className="">
-                    <h3 className="text-start">{project.title}</h3>
-                    <p className="text-gray-600 mt-2 text-start">{project.description}</p>
-                </div>
+
                 </div>
 
           </div>
