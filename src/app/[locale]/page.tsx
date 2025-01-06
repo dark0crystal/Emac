@@ -22,10 +22,7 @@ export default function HomePage() {
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_1000px_at_0%_100%,#133E87,transparent)]">
         <div className='grid grid-cols-2 h-full'>
-          {/* left column */}
-          <div className='px-20'>
-            <ImagesSlider/>
-          </div>
+          
 
           {/* Right column */}
           <div className='flex flex-col justify-center items-center text-right h-full px-20'>
@@ -38,8 +35,15 @@ export default function HomePage() {
                   <ContactUsButton/>
               </div>
               
-               </div>
-              </div>
+            </div>
+          </div>
+
+          {/* left column */}
+          <div className='px-20'>
+            <ImagesSlider/>
+          </div>
+
+
              </div>
            </div>
            </div>
