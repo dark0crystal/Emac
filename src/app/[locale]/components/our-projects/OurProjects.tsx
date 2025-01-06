@@ -1,23 +1,25 @@
 import Image from "next/image";
 import img1 from "../../../../../public/img1.jpeg"
+import { useTranslations } from "next-intl";
 export default function OurProjects() {
+    const t= useTranslations("our-projects")
   const projects = [
     {
       id: 1,
-      title: "Electrical Solutions",
-      description: "Providing innovative electrical services.",
+      title: t("project1.title"),
+      description: t("project1.description"),
       image: "../../../../../public/img1.jpeg"
     },
     {
       id: 2,
-      title: "Mechanical Solutions",
-      description: "Delivering top-notch mechanical projects.",
+      title: t("project2.title"),
+      description: t("project2.description"),
       image: "../../../../../public/img1.jpeg"
     },
     {
       id: 3,
-      title: "Air Conditioning",
-      description: "Efficient and reliable AC installation.",
+      title: t("project3.title"),
+      description: t("project3.description"),
       image: "../../../../../public/img1.jpeg"
     }
   ];
