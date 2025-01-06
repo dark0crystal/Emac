@@ -17,5 +17,20 @@
       "title":"",
       "paragraph": "We are committed to quality and professionalism in executing complex electrical works."
     }
+  },
+  "our-projects":{
+    "project1":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    },
+    "project2":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    },
+    "project3":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    }
+    
   }
 }

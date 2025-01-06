@@ -17,5 +17,20 @@
       "title":"",
       "paragraph": "نحن ملتزمون بالجودة والاحترافية في تنفيذ الأعمال الكهربائية المعقدة."
     }
+  },
+  "our-projects":{
+    "project1":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    },
+    "project2":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    },
+    "project3":{
+      "title":"projjjjjj1",
+      "description":"projjjjjj1"
+    }
+    
   }
 }
