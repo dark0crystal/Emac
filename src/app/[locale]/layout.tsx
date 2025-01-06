@@ -36,9 +36,9 @@ export default async function RootLayout({
   // side is the easiest way to get started
   let direction ="";
   if(locale == "ar"){
-    direction ="ltr"
-  }else{
     direction ="rtl"
+  }else{
+    direction ="ltr"
   }
   const messages = await getMessages();
   return (
