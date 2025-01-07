@@ -33,13 +33,13 @@ export default function OurProjects() {
   ];
 
   return (
-    <div className="p-8 h-fit flex flex-col justify-center items-center">
+    <div className="md:p-8 h-fit flex flex-col justify-center items-center">
       <h2 className="text-2xl font-bold text-center mb-8">{t("")}</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="relative flex justify-center rounded-3xl min-w-[350px] m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[550px] lg:min-h-[380px] lg:max-h-[400px] shadow-lg overflow-hidden bg-white transition-transform transform hover:scale-105"
+            className="relative flex justify-center rounded-3xl  w-[96vw] md:m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[540px] lg:min-h-[380px] lg:max-h-[400px] shadow-lg overflow-hidden bg-white transition-transform transform hover:scale-105"
           >
             <div className="h-full">
               <Image
