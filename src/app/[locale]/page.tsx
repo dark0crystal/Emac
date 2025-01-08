@@ -73,7 +73,7 @@ export default function HomePage() {
         </div>
 
      {/* why you should choose us Start*/}
-      <div className='h-[100vh] w-screen justify-center  items-center flex flex-col md:flex-row gap-4 md:flex-wrap'>
+      <div className='h-fit my-28 w-screen justify-center  items-center flex flex-col md:flex-row gap-4 md:flex-wrap'>
         <Card1/>
         <Card2/>
         <Card3/>
