@@ -35,7 +35,14 @@
     "project4":{
      "title":"المشروع الرابع",
       "description":"هذا مشروعنا إلي أشتغلنا عليه"
-    },
-    "":{}
+    }
+    
+  },
+  "footer":{
+    "copyright":"الحقوق محفوظة ل",
+    "companyName":"Emac",
+    "designedBy":"صمم من قبل",
+    "designerName":"المرداس",
+    "CompanyfullName":"الحلول الكهربائية والميكانيكية وتكييف الهواء ش.ش.و"
   }
 }
