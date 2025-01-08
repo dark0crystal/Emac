@@ -19,6 +19,7 @@
     }
   },
   "our-projects":{
+    "mainTitle":"مشاريعنا",
     "project1":{
       "title":"المشروع الأول",
       "description":"هذا مشروعنا إلي أشتغلنا عليه"
