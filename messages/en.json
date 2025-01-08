@@ -19,17 +19,22 @@
     }
   },
   "our-projects":{
+     "mainTitle":"Our Projects",
     "project1":{
-      "title":"projjjjjj1",
+      "title":"project 1",
       "description":"projjjjjj1"
     },
     "project2":{
-      "title":"projjjjjj1",
+      "title":"project 2",
       "description":"projjjjjj1"
     },
     "project3":{
-      "title":"projjjjjj1",
+      "title":"project 3",
       "description":"projjjjjj1"
+    },
+    "project4":{
+     "title":"project 4",
+      "description":"prolk dsf asdklfjda"
     }
     
   }
