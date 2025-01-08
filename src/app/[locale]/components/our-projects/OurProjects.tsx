@@ -34,7 +34,7 @@ export default function OurProjects() {
 
   return (
     <div className="md:p-8 h-fit flex flex-col justify-center items-center">
-      <h2 className="text-2xl font-bold text-center mb-8">{t("")}</h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-center my-12">{t("mainTitle")}</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center">
         {projects.map((project) => (
           <div
