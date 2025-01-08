@@ -39,7 +39,7 @@ export default function OurProjects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="relative flex justify-center rounded-3xl  w-[96vw] md:m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[540px] lg:min-h-[380px] lg:max-h-[400px] shadow-lg overflow-hidden bg-white transition-transform transform hover:scale-105"
+            className="relative flex justify-center rounded-3xl  w-[96vw] md:m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[540px] lg:min-h-[380px] lg:max-h-[400px] shadow-xl shadow-slate-300 overflow-hidden bg-white transition-transform transform hover:scale-105"
           >
             <div className="h-full">
               <Image
