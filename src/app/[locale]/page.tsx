@@ -9,6 +9,7 @@ import Card1 from './components/Cards/Card1';
 import Card2 from './components/Cards/Card2';
 import Card3 from './components/Cards/Card3';
 import OurProjects from './components/our-projects/OurProjects';
+import OurServices from './components/our-services/OurServices';
 
  
 export default function HomePage() {
@@ -59,15 +60,16 @@ export default function HomePage() {
           
        
 
-        <div className='h-[70vh] bg-[#608BC1]'>
-          <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
+        <div className='h-fit bg-[#608BC1]'>
+          <OurServices/>
+          {/* <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
           <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
+          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1> */}
         </div>
 
      {/* why you should choose us Start*/}
