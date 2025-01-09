@@ -1,7 +1,10 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page",
+    "about": {
+      "title":"About Us",
+      "description":"شركة الحلول الكهربائية و الميكانيكية و تكييف الهواء"
+    },
     "titleParagraph":"ِExperienced in fixing Air Conditions "
   },
   "cards": {
