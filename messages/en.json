@@ -45,5 +45,22 @@
     "designerName":"Al-Mardas",
     "CompanyfullName":"ELECTRO MECHANICAL & AIR CONDITIONING SOLUTIONS S.P.C"
 
+  },
+  "our-services":{
+    "our-services-cards":{
+      "title":"Out Services",
+      "card1":{
+        "title":"",
+        "description":""
+      },
+      "card2":{
+        "title":"",
+        "description":""
+      },
+      "card3":{
+        "title":"",
+        "description":""
+      }
+    }
   }
 }
