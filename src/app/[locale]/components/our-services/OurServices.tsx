@@ -2,8 +2,10 @@ import Image from "next/image";
 import img1 from "../../../../../public/img1.jpeg";
 import img2 from "../../../../../public/img2.jpeg";
 import img3 from "../../../../../public/img3.jpeg";
+import { useTranslations } from "next-intl";
 
 export default function OurServices() {
+    const t = useTranslations("")
     const services = [
         { title: "Service 1", description: "It's a good service", img: img1 },
         { title: "Service 2", description: "Another great service", img: img2 },
@@ -12,10 +14,13 @@ export default function OurServices() {
 
     return (
         <div className="h-fit w-screen bg-yellow-200 flex flex-col items-center p-10">
+            <div>
+                <h1>{t("")}</h1>
+            </div>
             {services.map((service, index) => (
                 <div
                     key={index}
-                    className="relative w-[90vw] lg:w-[80vw] h-[300px] rounded-xl overflow-hidden shadow-lg mb-10"
+                    className="relative w-[90vw] lg:max-w-[1100px] h-[300px] rounded-xl overflow-hidden shadow-lg mb-10"
                 >
                     <Image
                         src={service.img}
