@@ -21,19 +21,19 @@
   "our-projects":{
      "mainTitle":"Our Projects",
     "project1":{
-      "title":"project 1",
+      "title":"Air Conditioning installation work",
       "description":"projjjjjj1"
     },
     "project2":{
-      "title":"project 2",
+      "title":"Electrical maintenance",
       "description":"projjjjjj1"
     },
     "project3":{
-      "title":"project 3",
+      "title":"Plumbing maintenance",
       "description":"projjjjjj1"
     },
     "project4":{
-     "title":"project 4",
+     "title":"Our work in central fish market",
       "description":"prolk dsf asdklfjda"
     }
     
@@ -47,19 +47,20 @@
 
   },
   "our-services":{
+    "title":"Out Services",
     "our-services-cards":{
-      "title":"Out Services",
+      
       "card1":{
-        "title":"",
-        "description":""
+        "title":"HVAC supply",
+        "description":"Installation, testing & commissioning, and maintenance"
       },
       "card2":{
-        "title":"",
-        "description":""
+        "title":"Electrical Maintenance",
+        "description":"Electrical maintenance services include inspections, repairs, and system upgrades"
       },
       "card3":{
-        "title":"",
-        "description":""
+        "title":"Plumbing Maintenance",
+        "description":"Plumbing maintenance services involve inspections, leak repairs, and pipe cleaning"
       }
     }
   }
