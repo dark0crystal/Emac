@@ -19,7 +19,7 @@ export default function HomePage() {
 
       {/* first section start  */}
 
-      <div className='h-screen'>
+      <div className='h-[90vh]'>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_1000px_at_0%_100%,#133E87,transparent)]">
         <div className='grid grid-cols-2 h-full'>
@@ -53,7 +53,9 @@ export default function HomePage() {
 
         {/* first section End  */}
 
+  
 
+    
        <div>
           <OurProjects/>
        </div>
@@ -62,14 +64,6 @@ export default function HomePage() {
 
         <div>
           <OurServices/>
-          {/* <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#4335A7] text-3xl font-black'>إنطلق نحو السماء</h1>
-          <h1 className='text-[#FF7F3E] text-3xl font-black'>إنطلق نحو السماء</h1> */}
         </div>
 
      {/* why you should choose us Start*/}
@@ -79,6 +73,7 @@ export default function HomePage() {
         <Card3/>
 
       </div>
+    
       {/* why you should choose us End */}
 
     </div>
