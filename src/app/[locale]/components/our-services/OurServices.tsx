@@ -5,17 +5,17 @@ import img3 from "../../../../../public/img3.jpeg";
 import { useTranslations } from "next-intl";
 
 export default function OurServices() {
-    const t = useTranslations("")
+    const t = useTranslations("our-services")
     const services = [
-        { title: "Service 1", description: "It's a good service", img: img1 },
-        { title: "Service 2", description: "Another great service", img: img2 },
-        { title: "Service 3", description: "Our premium service", img: img3 },
+        { title: t("our-services-cards.card1.title"), description: t("our-services-cards.card1.description"), img: img1 },
+        { title: t("our-services-cards.card2.title"), description: t("our-services-cards.card2.description"), img: img2 },
+        { title: t("our-services-cards.card3.title"), description: t("our-services-cards.card3.description"), img: img3 },
     ];
 
     return (
         <div className="h-fit w-screen bg-yellow-200 flex flex-col items-center p-10">
             <div>
-                <h1>{t("")}</h1>
+                <h1 className="text-2xl md:text-4xl font-bold text-center my-12">{t("title")}</h1>
             </div>
             {services.map((service, index) => (
                 <div
