@@ -13,7 +13,7 @@ export default function OurServices() {
     ];
 
     return (
-        <div className="h-fit w-screen bg-yellow-200 flex flex-col items-center p-10">
+        <div className="h-fit w-screen  flex flex-col items-center p-10">
             <div>
                 <h1 className="text-2xl md:text-4xl font-bold text-center my-12">{t("title")}</h1>
             </div>
