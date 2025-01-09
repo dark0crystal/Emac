@@ -44,5 +44,22 @@
     "designedBy":"صمم من قبل",
     "designerName":"المرداس",
     "CompanyfullName":"الحلول الكهربائية والميكانيكية وتكييف الهواء ش.ش.و"
+  },
+  "our-services":{
+    "our-services-cards":{
+      "title":"خدماتنا",
+      "card1":{
+        "title":"",
+        "description":""
+      },
+      "card2":{
+        "title":"",
+        "description":""
+      },
+      "card3":{
+        "title":"",
+        "description":""
+      }
+    }
   }
 }
