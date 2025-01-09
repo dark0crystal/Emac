@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react";
 import Image from "next/image";
 import img1 from "../../../../../public/img1.jpeg";
 import { useTranslations } from "next-intl";
@@ -5,6 +7,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function OurProjects() {
   const t = useTranslations("our-projects");
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       id: 1,
@@ -35,37 +39,59 @@ export default function OurProjects() {
   return (
     <div className="md:p-8 h-fit flex flex-col justify-center items-center">
       <h2 className="text-2xl md:text-4xl font-bold text-center my-12">{t("mainTitle")}</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="relative flex justify-center rounded-3xl  w-[96vw] md:m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[540px] lg:min-h-[380px] lg:max-h-[400px] shadow-xl shadow-slate-300 overflow-hidden bg-white transition-transform transform hover:scale-105"
-          >
-            <div className="h-full">
+      {selectedProject ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className=" bg-white rounded-3xl  max-w-xl md:max-w-3xl  lg:max-w-5xl min-h-[350px]  lg:min-h-56 grid  grid-cols-1   md:grid-cols-2  w-full relative shadow-lg overflow-hidden">
+            <button
+              className="absolute  bottom-4   right-4 bg-red-500 text-white rounded-full px-4 py-2"
+              onClick={() => setSelectedProject(null)}
+            >
+              Cancel
+            </button>
+            <div className="p-6 bg-slate-400">
+              <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+              <p className="mt-4 text-gray-600">{selectedProject.description}</p>
+            </div>
+            <div className="bg-amber-100 relative">
               <Image
                 src={img1}
-                alt={project.title}
+                alt={selectedProject.title}
                 layout="fill"
-                objectFit="cover"
+                  objectFit="cover"
+                className="rounded-y-lg"
               />
             </div>
-            <div className="absolute h-fit w-[95%] bg-white/80 p-4 rounded-3xl bottom-4 flex flex-row justify-between items-center">
-                
-               
-                <div className="">
-                    <h3 className="">{project.title}</h3>
-                    <p className="text-gray-600 mt-2 text-start">{project.description}</p>
-                </div>
-
-                <div>
-                    <MdArrowOutward />
-                </div>
-
-                </div>
-
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              onClick={() => setSelectedProject(project)}
+              className="relative flex justify-center rounded-3xl w-[96vw] md:m-2 h-[40vh] md:h-[45vw] md:w-[90vw] md:min-h-[45vh] lg:max-w-[650px] lg:w-[300px] lg:min-w-[540px] lg:min-h-[380px] lg:max-h-[400px] shadow-xl shadow-slate-300 overflow-hidden bg-white transition-transform transform hover:scale-105 cursor-pointer"
+            >
+              <div className="h-full">
+                <Image
+                  src={img1}
+                  alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                />
+              </div>
+              <div className="absolute h-fit w-[95%] bg-white/80 p-4 rounded-3xl bottom-4 flex flex-row justify-between items-center">
+                <div>
+                  <h3>{project.title}</h3>
+                  <p className="text-gray-600 mt-2 text-start">{project.description}</p>
+                </div>
+                <div>
+                  <MdArrowOutward />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
