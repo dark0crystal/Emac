@@ -10,6 +10,7 @@ import Card2 from './components/Cards/Card2';
 import Card3 from './components/Cards/Card3';
 import OurProjects from './components/our-projects/OurProjects';
 import OurServices from './components/our-services/OurServices';
+import About from './components/about/AboutUs';
 
  
 export default function HomePage() {
@@ -53,26 +54,29 @@ export default function HomePage() {
 
         {/* first section End  */}
 
-  
+      {/* about us section */}
+      <div>
+        <About/>
+      </div>
 
-    
+    {/* Our Projects section */}
        <div>
           <OurProjects/>
        </div>
           
        
-
+     {/* Our Services section */}
         <div>
           <OurServices/>
         </div>
 
      {/* why you should choose us Start*/}
-      <div className='h-fit my-28 w-screen justify-center  items-center flex flex-col md:flex-row gap-4 md:flex-wrap'>
+      {/* <div className='h-fit my-28 w-screen justify-center  items-center flex flex-col md:flex-row gap-4 md:flex-wrap'>
         <Card1/>
         <Card2/>
         <Card3/>
 
-      </div>
+      </div> */}
     
       {/* why you should choose us End */}
 
