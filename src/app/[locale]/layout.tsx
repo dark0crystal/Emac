@@ -45,7 +45,9 @@ export default async function RootLayout({
     <html lang={locale} dir={direction}>
       <body className={ibmPlexSansArabic.className}>
       <NextIntlClientProvider messages={messages}>
-        <NavBar/>
+ 
+          <NavBar/>
+        
         {children}
         <Footer/>
         </NextIntlClientProvider>
