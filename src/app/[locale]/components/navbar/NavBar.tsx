@@ -11,7 +11,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="flex justify-between items-center w-screen h-[10vh] bg-white shadow-lg shadow-gray-300 border-b-[1px] ">
+    <div className="flex justify-between items-center w-screen h-[10vh] bg-white  border-b-[1px] ">
       
 
       {/* Navigation Links (hidden on small screens) */}
