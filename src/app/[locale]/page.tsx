@@ -23,30 +23,27 @@ export default function HomePage() {
       <div className='h-[90vh]'>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_1000px_at_0%_100%,#133E87,transparent)]">
-        <div className='grid grid-cols-2 h-full'>
-          
+        
 
-          {/* Right column */}
-          <div className='flex flex-col justify-center items-center text-right h-full px-20'>
-            <div className=''>
-              <h1 className='font-semibold leading-normal text-4xl'>{t('title')}</h1>
-              <p className='mt-3 text-lg text-slate-800'>{t("titleParagraph")}</p>
-
-              <div className='flex flex-row justify-center gap-5 mt-7'> 
-                  <OurProjectsButton/>
-                  <ContactUsButton/>
-              </div>
-              
+      <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 h-full">
+        {/* Left column (text content) */}
+        <div className="order-2 lg:order-1 flex flex-col justify-center items-center text-right h-full px-8 lg:px-20">
+          <div>
+            <h1 className="font-semibold leading-normal text-3xl lg:text-4xl">{t('title')}</h1>
+            <p className="mt-3 text-base lg:text-lg text-slate-800">{t("titleParagraph")}</p>
+            <div className="flex flex-row justify-center lg:justify-start gap-5 mt-7"> 
+              <OurProjectsButton />
+              <ContactUsButton />
             </div>
           </div>
+        </div>
 
-          {/* left column */}
-          <div className='px-20'>
-            <ImagesSlider/>
-          </div>
+        {/* Right column (image slider) */}
+        <div className="order-1 lg:order-2 px-6 md:px-0 ">
+          <ImagesSlider />
+        </div>
+      </div>
 
-
-             </div>
            </div>
            </div>
         
