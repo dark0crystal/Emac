@@ -41,24 +41,24 @@ export default function OurProjects() {
       <h2 className="text-2xl md:text-4xl font-bold text-center my-12">{t("mainTitle")}</h2>
       {selectedProject ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className=" bg-white rounded-3xl  max-w-xl md:max-w-3xl  lg:max-w-5xl min-h-[350px]  lg:min-h-56 grid  grid-cols-1   md:grid-cols-2  w-full relative shadow-lg overflow-hidden">
+          <div className=" bg-white rounded-3xl  max-w-xl md:max-w-3xl  lg:max-w-5xl min-h-[500px]  md:min-h-[450px] grid-rows-2  grid md:grid-rows-1   md:grid-cols-2  w-full relative shadow-lg overflow-hidden">
             <button
-              className="absolute  bottom-4   right-4 bg-red-500 text-white rounded-full px-4 py-2"
+              className="absolute  bottom-4 z-20  right-4 bg-red-500 text-white rounded-full px-4 py-2"
               onClick={() => setSelectedProject(null)}
             >
               Cancel
             </button>
-            <div className="p-6 bg-slate-400">
+            <div className="p-6 ">
               <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
               <p className="mt-4 text-gray-600">{selectedProject.description}</p>
             </div>
-            <div className="bg-amber-100 relative">
+            <div className=" relative min-h-[200px] bg-slate-500 md:h-full">
               <Image
                 src={img1}
                 alt={selectedProject.title}
                 layout="fill"
-                  objectFit="cover"
-                className="rounded-y-lg"
+                objectFit="cover"
+                className="md:rounded-y-lg"
               />
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function OurProjects() {
               <div className="absolute h-fit w-[95%] bg-white/80 p-4 rounded-3xl bottom-4 flex flex-row justify-between items-center">
                 <div>
                   <h3>{project.title}</h3>
-                  <p className="text-gray-600 mt-2 text-start">{project.description}</p>
+                  
                 </div>
                 <div>
                   <MdArrowOutward />
