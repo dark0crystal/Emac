@@ -9,18 +9,21 @@ import img5 from "../../../../../public/img5.jpeg"
 
 export default function ImagesSlider() {
   const cards = [
-    { id: 1, title: "Card 1", content: "This is card 1." ,img: img1},
-    { id: 2, title: "Card 2", content: "This is card 2.", img: img2},
-    { id: 3, title: "Card 3", content: "This is card 3." ,img: img3},
-    { id: 4, title: "Card 4", content: "This is card 4." ,img: img4},
-    { id: 5, title: "Card 5", content: "This is card 5." ,img: img5},
+    { id: 1 ,img: img1},
+    { id: 2, img: img2},
+    { id: 3 ,img: img3},
+    { id: 4 ,img: img4},
+    { id: 5 ,img: img5},
   ];
 
   return (
-    <div className="relative h-full overflow-hidden flex flex-col items-center">
+    <div className="relative h-full overflow-hidden flex flex-col items-center ">
+      {/* <div className="absolute bottom-0 bg-gradient-to-t z-30 from-[#133E87] to-transparent h-[20vh] w-full"></div> */}
+      {/* <div className="absolute top-0 bg-gradient-radial from-[#2575ff] to-transparent z-30 h-[30vh] w-full"></div> */}
 
+      
       <motion.div
-        className="absolute flex flex-col"
+        className="absolute flex flex-col "
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
         transition={{
@@ -29,6 +32,7 @@ export default function ImagesSlider() {
           ease: "linear",
         }}
       >
+        
         {/* Original Cards */}
         {cards.map((card) => (
           <div
