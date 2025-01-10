@@ -17,8 +17,7 @@ export default function ImagesSlider() {
   ];
 
   return (
-    <div className="relative h-full overflow-hidden ">
-      <div className="absolute z-20 h-[20vh]  w-full top-0 bg-[linear-gradient(circle_1000px_at_0%_100%,#133E87,transparent)]">
+    <div className="relative h-full overflow-hidden flex flex-col items-center">
 
       <motion.div
         className="absolute flex flex-col"
@@ -26,7 +25,7 @@ export default function ImagesSlider() {
         animate={{ y: "-100%" }}
         transition={{
           repeat: Infinity,
-          duration: 40, // Adjust speed by changing duration
+          duration: 30, // Adjust speed by changing duration
           ease: "linear",
         }}
       >
@@ -34,7 +33,7 @@ export default function ImagesSlider() {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="bg-white relative shadow-lg rounded-sm my-2  overflow-hidden h-[340px] w-[540px] mx-auto"
+            className="bg-white relative shadow-lg rounded-sm my-2  overflow-hidden min-h-72 min-w-[90vw] lg:min-h-[340px] lg:min-w-[540px] mx-auto"
           >
             <Image
              alt="img"
@@ -59,7 +58,7 @@ export default function ImagesSlider() {
         ))} */}
         
       </motion.div>
-      </div>
+ 
     </div>
   );
 }
