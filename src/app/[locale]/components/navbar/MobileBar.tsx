@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "@/i18n/routing";
 import { FiMenu, FiX } from "react-icons/fi"; // Menu and Close icons from react-icons
+import LanguageChange from "./LanguageChange";
 
 export default function MobileBar({ navLinks }:any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,10 @@ export default function MobileBar({ navLinks }:any) {
                 <h1 className="text-xl font-semibold text-black/80">{navLink.name}</h1>
               </Link>
             ))}
+            
+
+              <LanguageChange/>
+          
           </div>
         </div>
       )}
