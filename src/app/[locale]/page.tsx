@@ -12,6 +12,7 @@ import OurProjects from './components/our-projects/OurProjects';
 import OurServices from './components/our-services/OurServices';
 import About from './components/about/AboutUs';
 import ContactUs from './components/contact-us/ContactUs';
+import OurClients from './components/our-clients/OurClients';
 
  
 export default function HomePage() {
@@ -67,6 +68,10 @@ export default function HomePage() {
      {/* Our Services section */}
         <div id='our-services'>
           <OurServices/>
+        </div>
+
+        <div>
+          <OurClients/>
         </div>
 
      {/* why you should choose us Start*/}
