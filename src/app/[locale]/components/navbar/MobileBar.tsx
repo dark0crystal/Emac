@@ -18,11 +18,11 @@ export default function MobileBar({ navLinks }:any) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-[10vh] left-0 w-full bg-white shadow-lg z-50">
-          <div className="flex flex-col items-center space-y-4 py-4">
+        <div className="absolute top-[10vh]  left-0 w-full bg-gray-100/95 shadow-lg z-50">
+          <div className="flex flex-col justify-center h-[90vh] items-center space-y-4 py-4">
             {navLinks.map((navLink:any, index:any) => (
               <Link href={navLink.direction} key={index} onClick={() => setIsOpen(false)}>
-                <h1 className="text-lg font-normal text-black">{navLink.name}</h1>
+                <h1 className="text-xl font-semibold text-black/80">{navLink.name}</h1>
               </Link>
             ))}
           </div>
