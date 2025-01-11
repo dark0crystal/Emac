@@ -54,18 +54,18 @@ export default function HomePage() {
         {/* first section End  */}
 
       {/* about us section */}
-      <div>
+      <div id='about-us'>
         <About/>
       </div>
 
     {/* Our Projects section */}
-       <div>
+       <div id='our-projects'>
           <OurProjects/>
        </div>
           
        
      {/* Our Services section */}
-        <div>
+        <div id='our-services'>
           <OurServices/>
         </div>
 
@@ -78,7 +78,7 @@ export default function HomePage() {
       </div> */}
     
       {/* why you should choose us End */}
-      <div>
+      <div id='contact-us'>
         <ContactUs/>
       </div>
 
