@@ -1,6 +1,7 @@
 import Brand from "./Brand";
 import NavLinks from "./NavLinks";
 import MobileBar from "./MobileBar";
+import LanguageChange from "./LanguageChange";
 
 export default function NavBar() {
   const navLinks = [
@@ -11,14 +12,14 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="flex justify-between items-center w-screen h-[10vh] bg-white/40  border-b-[1px] ">
+    <div dir="rtl"  className="flex justify-between items-center w-screen h-[10vh] bg-white/40  border-b-[1px] ">
       
 
       {/* Navigation Links (hidden on small screens) */}
       <div className="hidden md:flex">
         <NavLinks navLinks={navLinks} />
       </div>
-
+      
       
       {/* Mobile Menu (visible on small screens) */}
       <MobileBar navLinks={navLinks} />
