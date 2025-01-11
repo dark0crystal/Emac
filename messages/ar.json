@@ -76,5 +76,12 @@
       "formLabels":{
         "submit":"ارسل الطلب"
       }
+ },
+ "navbar":{
+    "langChange":"English",
+    "about-us":"نبذة عنّا",
+    "our-projects":"مشاريعنا",
+    "our-services":"خدماتنا",
+    "contact-us":"تواصل معنا"
  }
 }
