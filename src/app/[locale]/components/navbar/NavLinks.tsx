@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/routing";
+import LanguageChange from "./LanguageChange";
 
 export default function NavLinks({ navLinks }:any) {
   return (
@@ -8,6 +9,7 @@ export default function NavLinks({ navLinks }:any) {
           <h1 className="text-lg mx-4 font-normal">{navLink.name}</h1>
         </Link>
       ))}
+      <LanguageChange/>
     </div>
   );
 }
