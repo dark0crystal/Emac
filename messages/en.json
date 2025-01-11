@@ -1,10 +1,6 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": {
-      "title":"About Us",
-      "description":"شركة الحلول الكهربائية و الميكانيكية و تكييف الهواء"
-    },
     "titleParagraph":"ِExperienced in fixing Air Conditions "
   },
   "cards": {
@@ -20,6 +16,10 @@
       "title":"",
       "paragraph": "We are committed to quality and professionalism in executing complex electrical works."
     }
+  },
+  "about": {
+    "title":"About Us",
+    "description":"شركة الحلول الكهربائية و الميكانيكية و تكييف الهواء"
   },
   "our-projects":{
      "mainTitle":"Our Projects",
@@ -66,5 +66,12 @@
         "description":"Plumbing maintenance services involve inspections, leak repairs, and pipe cleaning"
       }
     }
+  },
+  "navbar":{
+     "langChange":"العربية",
+     "about-us":"About Us",
+     "our-projects":"Projects",
+     "our-services":"Services",
+     "contact-us":"Contact Us"
   }
 }
