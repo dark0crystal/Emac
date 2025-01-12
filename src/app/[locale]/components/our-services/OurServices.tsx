@@ -15,7 +15,10 @@ export default function OurServices() {
     return (
         <div className="h-fit w-screen  flex flex-col items-center p-10 my-24">
             <div>
-                <h1 className="text-2xl md:text-4xl font-bold text-center my-12">{t("title")}</h1>
+            <h2 className="relative z-20 text-2xl md:text-4xl font-bold text-center my-12">
+                {t("title")}
+                <span className="absolute -z-10 bottom-0 left-1/2 transform -translate-x-1/2 w-full h-4 md:h-5 bg-blue-400/40"></span>
+            </h2>
             </div>
             {services.map((service, index) => (
                 <div
