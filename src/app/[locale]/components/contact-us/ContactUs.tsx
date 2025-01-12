@@ -1,6 +1,7 @@
 "use client"
 import {SubmitHandler, useForm} from "react-hook-form"
 import { useTranslations } from "next-intl";
+import { MotionDiv } from "../MotionDiv";
 
 type FormFields ={
     email:string;
@@ -19,7 +20,13 @@ export default function ContactUs(){
         <div className="h-fit">
             <div className="flex flex-col">
                 {/* contact with gmail form*/}
-                <div className="flex items-center justify-center min-h-screen bg-gray-100">
+                <MotionDiv
+                 className="flex items-center justify-center min-h-screen bg-gray-100"
+                 initial={{ opacity: 0, y: 150 }} // Initial state
+                 whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+                 viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+                 transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+                 >
                     <form 
                         onSubmit={handleSubmit(onSubmit)} 
                         className="flex flex-col w-full max-w-lg bg-white shadow-md rounded-lg p-6 space-y-6"
@@ -53,10 +60,16 @@ export default function ContactUs(){
                             {t("formLabels.submit")}
                         </button>
                     </form>
-                </div>
+                </MotionDiv>
 
                 {/* social network links */}
-                <div>
+                <MotionDiv
+                className=""
+                 initial={{ opacity: 0, y: 150 }} // Initial state
+                 whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+                 viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+                 transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+                >
                     {/* whatsapp icon*/}
                     <div>
 
@@ -65,7 +78,7 @@ export default function ContactUs(){
                     <div>
                         
                     </div>
-                </div>
+                </MotionDiv>
             </div>
         </div>
     )
