@@ -74,5 +74,8 @@
      "our-projects":"Projects",
      "our-services":"Services",
      "contact-us":"Contact Us"
-  }
+  },
+  "our-clients":{
+    "title":"Our Clients"
+   }
 }
