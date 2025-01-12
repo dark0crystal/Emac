@@ -83,5 +83,8 @@
     "our-projects":"مشاريعنا",
     "our-services":"خدماتنا",
     "contact-us":"تواصل معنا"
+ },
+ "our-clients":{
+  "title":"عملائنا"
  }
 }
