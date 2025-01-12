@@ -13,6 +13,7 @@ import OurServices from './components/our-services/OurServices';
 import About from './components/about/AboutUs';
 import ContactUs from './components/contact-us/ContactUs';
 import OurClients from './components/our-clients/OurClients';
+import { MotionDiv } from './components/MotionDiv';
 
  
 export default function HomePage() {
@@ -29,7 +30,13 @@ export default function HomePage() {
 
       <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 h-full">
         {/* Left column (text content) */}
-        <div className="order-2 lg:order-1 flex flex-col justify-center items-center text-right h-full px-8 lg:px-20">
+        <MotionDiv 
+        className="order-2 lg:order-1 flex flex-col justify-center items-center text-right h-full px-8 lg:px-20"
+        initial={{ opacity: 0, y: 150 }} // Initial state
+          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+        >
           <div>
             <h1 className="text-center md:text-start font-semibold leading-normal text-2xl md:text-3xl lg:text-4xl">{t('title')}</h1>
             <p className="mt-3 text-center md:text-start text-base lg:text-lg text-slate-800/80">{t("titleParagraph")}</p>
@@ -38,12 +45,18 @@ export default function HomePage() {
               <ContactUsButton />
             </div>
           </div>
-        </div>
+        </MotionDiv>
 
         {/* Right column (image slider) */}
-        <div className="order-1 lg:order-2 px-6 md:px-0 ">
+        <MotionDiv 
+        className="order-1 lg:order-2 px-6 md:px-0 "
+        initial={{ opacity: 0, y: 150 }} // Initial state
+          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+        >
           <ImagesSlider />
-        </div>
+        </MotionDiv>
 
       </div>
 
