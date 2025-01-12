@@ -2,6 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import img1 from "../../../../../public/img1.jpeg";
+import img2 from "../../../../../public/img2.jpeg";
+import img3 from "../../../../../public/img3.jpeg";
+import img4 from "../../../../../public/img4.jpeg";
 import { useTranslations } from "next-intl";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -14,25 +17,25 @@ export default function OurProjects() {
       id: 1,
       title: t("project1.title"),
       description: t("project1.description"),
-      image: "../../../../../public/img1.jpeg",
+      image: img1,
     },
     {
       id: 2,
       title: t("project2.title"),
       description: t("project2.description"),
-      image: "../../../../../public/img1.jpeg",
+      image: img2,
     },
     {
       id: 3,
       title: t("project3.title"),
       description: t("project3.description"),
-      image: "../../../../../public/img1.jpeg",
+      image: img3,
     },
     {
       id: 4,
       title: t("project4.title"),
       description: t("project4.description"),
-      image: "../../../../../public/img1.jpeg",
+      image: img4,
     },
   ];
 
@@ -58,7 +61,7 @@ export default function OurProjects() {
             </div>
             <div className=" relative min-h-[200px] bg-slate-500 md:h-full">
               <Image
-                src={img1}
+                src={selectedProject.image}
                 alt={selectedProject.title}
                 layout="fill"
                 objectFit="cover"
@@ -77,19 +80,19 @@ export default function OurProjects() {
             >
               <div className="h-full">
                 <Image
-                  src={img1}
+                  src={project.image}
                   alt={project.title}
                     layout="fill"
                     objectFit="cover"
                 />
               </div>
-              <div className="absolute h-fit w-[95%] bg-sky-100/90 p-4 md:p-5 rounded-3xl bottom-4 flex flex-row justify-between items-center">
+              <div className="absolute h-fit w-[95%] bg-sky-100 p-2 md:p-3 rounded-3xl bottom-4 flex flex-row justify-between items-center">
                 <div>
                   <h3 className="text-base font-medium md:text-lg md:font-semibold text-black/70">{project.title}</h3>
                   
                 </div>
-                <div>
-                  <MdArrowOutward />
+                <div className="rounded-full bg-blue-200 p-2">
+                  <MdArrowOutward className="text-2xl text-"/>
                 </div>
               </div>
             </div>
