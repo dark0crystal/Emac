@@ -55,10 +55,10 @@ export default function Footer() {
                  
             </div>
             <div className=" flex justify-around items-center ">
-                <MdOutlineElectricBolt className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-black" />
-                <LuHousePlug className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 mx-4 text-black" />
-                <MdElectricalServices className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-black" />
-                <TbCarFanFilled className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-black" />
+                <MdOutlineElectricBolt className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
+                <LuHousePlug className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 mx-4 text-gray-600" />
+                <MdElectricalServices className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
+                <TbCarFanFilled className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
             </div>
         </div>
     );
