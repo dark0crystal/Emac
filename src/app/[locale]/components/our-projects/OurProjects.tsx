@@ -38,7 +38,11 @@ export default function OurProjects() {
 
   return (
     <div className="md:p-8 h-fit flex flex-col justify-center items-center">
-      <h2 className="text-2xl md:text-4xl font-bold text-center my-12">{t("mainTitle")}</h2>
+      <h2 className="relative z-20 text-2xl md:text-4xl font-bold text-center my-12">
+        {t("mainTitle")}
+        <span className="absolute -z-10 bottom-0 left-1/2 transform -translate-x-1/2 w-full h-4 md:h-5 bg-blue-400/40"></span>
+      </h2>
+
       {selectedProject ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className=" bg-white rounded-3xl  max-w-xl md:max-w-3xl  lg:max-w-5xl min-h-[500px]  md:min-h-[450px] grid-rows-2  grid md:grid-rows-1   md:grid-cols-2  w-full relative shadow-lg overflow-hidden">
