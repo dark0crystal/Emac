@@ -1,4 +1,3 @@
-"use client"
 import { useState } from "react";
 import Image from "next/image";
 import img1 from "../../../../../public/img1.jpeg";
@@ -7,6 +6,9 @@ import img3 from "../../../../../public/img3.jpeg";
 import img4 from "../../../../../public/img4.jpeg";
 import { useTranslations } from "next-intl";
 import { MdArrowOutward } from "react-icons/md";
+import { motion } from "framer-motion";
+
+
 
 export default function OurProjects() {
   const t = useTranslations("our-projects");
@@ -48,18 +50,18 @@ export default function OurProjects() {
 
       {selectedProject ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className=" bg-white rounded-3xl  max-w-xl md:max-w-3xl  lg:max-w-5xl min-h-[500px]  md:min-h-[450px] grid-rows-2  grid md:grid-rows-1   md:grid-cols-2  w-full relative shadow-lg overflow-hidden">
+          <div className="bg-white rounded-3xl max-w-xl md:max-w-3xl lg:max-w-5xl min-h-[500px] md:min-h-[450px] grid-rows-2 grid md:grid-rows-1 md:grid-cols-2 w-full relative shadow-lg overflow-hidden">
             <button
-              className="absolute  bottom-4 z-20  right-4 bg-red-500 text-white rounded-full px-4 py-2"
+              className="absolute bottom-4 z-20 right-4 bg-red-500 text-white rounded-full px-4 py-2"
               onClick={() => setSelectedProject(null)}
             >
               Cancel
             </button>
-            <div className="p-6 ">
+            <div className="p-6">
               <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
               <p className="mt-4 text-gray-600">{selectedProject.description}</p>
             </div>
-            <div className=" relative min-h-[200px] bg-slate-500 md:h-full">
+            <div className="relative min-h-[200px] bg-slate-500 md:h-full">
               <Image
                 src={selectedProject.image}
                 alt={selectedProject.title}
@@ -71,7 +73,13 @@ export default function OurProjects() {
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-2 justify-center items-center"
+          initial={{ opacity: 0, y: 150 }} // Initial state
+          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+        >
           {projects.map((project) => (
             <div
               key={project.id}
@@ -82,22 +90,23 @@ export default function OurProjects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
               <div className="absolute h-fit w-[95%] bg-sky-100 p-2 md:p-3 rounded-3xl bottom-4 flex flex-row justify-between items-center">
                 <div>
-                  <h3 className="text-base font-medium md:text-lg md:font-semibold text-black/70">{project.title}</h3>
-                  
+                  <h3 className="text-base font-medium md:text-lg md:font-semibold text-black/70">
+                    {project.title}
+                  </h3>
                 </div>
                 <div className="rounded-full bg-blue-200 p-2">
-                  <MdArrowOutward className="text-2xl text-"/>
+                  <MdArrowOutward className="text-2xl" />
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       )}
     </div>
   );
