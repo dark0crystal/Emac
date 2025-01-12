@@ -2,15 +2,20 @@
 import {SubmitHandler, useForm} from "react-hook-form"
 import { useTranslations } from "next-intl";
 import { MotionDiv } from "../MotionDiv";
+import { z } from "zod";
 
-type FormFields ={
-    email:string;
-    emailSubject:string;
-    emailText: string;
-}
+
+const schema =z.object({
+    email: z.string().email(),
+    emailSubject:z.string().min(8),
+    emailText: z.string().min(20),
+})
+type FormFields =z.infer<typeof schema>;
+
+
 export default function ContactUs(){
     const t = useTranslations("contact-us")
-    const {register ,handleSubmit} =useForm<FormFields>();
+    const {register , handleSubmit , setError , formState:{errors,isSubmitting}}  =useForm<FormFields>();
     const onSubmit:SubmitHandler<FormFields> =(data)=>{
         console.log(data)
     }
