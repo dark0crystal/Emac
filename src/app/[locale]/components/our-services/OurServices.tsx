@@ -3,6 +3,7 @@ import img1 from "../../../../../public/img1.jpeg";
 import img2 from "../../../../../public/img2.jpeg";
 import img3 from "../../../../../public/img3.jpeg";
 import { useTranslations } from "next-intl";
+import { MotionDiv } from "../MotionDiv";
 
 export default function OurServices() {
     const t = useTranslations("our-services")
@@ -21,9 +22,13 @@ export default function OurServices() {
             </h2>
             </div>
             {services.map((service, index) => (
-                <div
+                <MotionDiv
                     key={index}
                     className="relative w-[90vw] lg:max-w-[1100px] h-[300px] rounded-xl overflow-hidden shadow-lg mb-10"
+                    initial={{ opacity: 0, y: 150 }} // Initial state
+                    whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+                    viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+                    transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
                 >
                     <Image
                         src={service.img}
@@ -37,7 +42,7 @@ export default function OurServices() {
                         <h1 className="text-2xl font-bold mb-2">{service.title}</h1>
                         <p className="text-sm">{service.description}</p>
                     </div>
-                </div>
+                </MotionDiv>
             ))}
         </div>
     );
