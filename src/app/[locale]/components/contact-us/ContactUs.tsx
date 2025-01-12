@@ -45,7 +45,7 @@ export default function ContactUs() {
             className="flex flex-col w-full max-w-lg bg-white shadow-md rounded-lg p-6 space-y-6"
           >
             <h2 className="text-2xl font-semibold text-gray-800 text-center">
-              Contact Us
+              {t("title")}
             </h2>
 
             {/* Email Field */}
