@@ -40,7 +40,7 @@ export default function OurClients(){
         return controls.stop;
     },[xTranslation,width])
     return(
-        <div dir="ltr">
+        <div dir="ltr" className="overflow-hidden">
             <motion.div className="flex gap-16 w-max" ref={ref} style={{x:xTranslation}}>
                 {/* dublicate the cards  */}
                 {[...CardContent , ...CardContent ,...CardContent].map((content,index)=>(
