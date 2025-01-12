@@ -7,6 +7,7 @@ import img4 from "../../../../../public/img4.jpeg";
 import { useTranslations } from "next-intl";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
+import { MotionDiv } from "../MotionDiv";
 
 
 
@@ -50,7 +51,13 @@ export default function OurProjects() {
 
       {selectedProject ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="bg-white rounded-3xl max-w-xl md:max-w-3xl lg:max-w-5xl min-h-[500px] md:min-h-[450px] grid-rows-2 grid md:grid-rows-1 md:grid-cols-2 w-full relative shadow-lg overflow-hidden">
+          <MotionDiv 
+          className="bg-white rounded-3xl max-w-xl md:max-w-3xl lg:max-w-5xl min-h-[500px] md:min-h-[450px] grid-rows-2 grid md:grid-rows-1 md:grid-cols-2 w-full relative shadow-lg overflow-hidden"
+          initial={{ opacity: 0, y: 150 }} // Initial state
+          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+          >
             <button
               className="absolute bottom-4 z-20 right-4 bg-red-500 text-white rounded-full px-4 py-2"
               onClick={() => setSelectedProject(null)}
@@ -70,7 +77,7 @@ export default function OurProjects() {
                 className="md:rounded-y-lg"
               />
             </div>
-          </div>
+          </MotionDiv>
         </div>
       ) : (
         <motion.div
