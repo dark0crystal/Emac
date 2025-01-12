@@ -69,6 +69,7 @@
     },
     "contact-us":{
       "title":"تواصل معنا",
+      "contactOnWhatsApp":"تواصل معنا ",
       "formPlaceHolders":{
         "email":"ادخل بريدك الإلكتروني",
         "subject":"ادخِل عنواناً لطلبك",
@@ -77,6 +78,7 @@
       "formLabels":{
         "submit":"ارسل الطلب"
       }
+      
  },
  "navbar":{
     "langChange":"English",
