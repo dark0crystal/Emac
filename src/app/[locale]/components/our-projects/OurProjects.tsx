@@ -83,9 +83,9 @@ export default function OurProjects() {
                     objectFit="cover"
                 />
               </div>
-              <div className="absolute h-fit w-[95%] bg-white/80 p-4 rounded-3xl bottom-4 flex flex-row justify-between items-center">
+              <div className="absolute h-fit w-[95%] bg-sky-100/90 p-4 md:p-5 rounded-3xl bottom-4 flex flex-row justify-between items-center">
                 <div>
-                  <h3>{project.title}</h3>
+                  <h3 className="text-base font-medium md:text-lg md:font-semibold text-black/70">{project.title}</h3>
                   
                 </div>
                 <div>
