@@ -31,12 +31,13 @@ export default function HomePage() {
       <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 h-full">
         {/* Left column (text content) */}
         <MotionDiv 
-        className="order-2 lg:order-1 flex flex-col justify-center items-center text-right h-full px-8 lg:px-20"
+        className=" order-2 lg:order-1 flex flex-col justify-center items-center text-right h-full px-8 lg:px-20"
         initial={{ opacity: 0, y: 150 }} // Initial state
           whileInView={{ opacity: 1, y: 0 }} // Animation while in view
           viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
           transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
         >
+
           <div>
             <h1 className="text-center md:text-start font-semibold leading-normal text-2xl md:text-3xl lg:text-4xl">{t('title')}</h1>
             <p className="mt-3 text-center md:text-start text-base lg:text-lg text-slate-800/80">{t("titleParagraph")}</p>
@@ -48,15 +49,23 @@ export default function HomePage() {
         </MotionDiv>
 
         {/* Right column (image slider) */}
-        <MotionDiv 
-        className="order-1 lg:order-2 px-6 md:px-0 "
-        initial={{ opacity: 0, y: 150 }} // Initial state
-          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
-          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
-          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
-        >
-          <ImagesSlider />
-        </MotionDiv>
+<MotionDiv
+  className="relative order-1 lg:order-2 px-6 md:px-0"
+  initial={{ opacity: 0, y: 150 }} // Initial state
+  whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+  viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+  transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+>
+  {/* Top Gradient */}
+  <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/80 to-transparent z-10 pointer-events-none"></div>
+
+  {/* Image Slider */}
+  <ImagesSlider />
+
+  {/* Bottom Gradient */}
+  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/80 to-transparent z-10 pointer-events-none"></div>
+</MotionDiv>
+
 
       </div>
 
