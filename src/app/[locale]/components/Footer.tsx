@@ -6,31 +6,44 @@ import { MdElectricalServices } from "react-icons/md";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import brand from "../../../../public/logo.png"
+import { MotionDiv } from "./MotionDiv";
 
 
 
 export default function Footer() {
     const t= useTranslations("footer")
     return (
-        <div className="h-[60vh] bg-[#F6F4F0] grid grid-rows-3">
+        <div className="h-[70vh] bg-[#F6F4F0] flex flex-col">
             <div className=" flex justify-center items-center">
-                <div className="flex bg-gradient-to-r from-blue-400 via-blue-300 to-blue-300 shadow-lg shadow-slate-400 w-[70vw] rounded-3xl p-10 flex-col justify-center items-center">
+                <MotionDiv
+                className="flex bg-gradient-to-r from-blue-400 via-blue-300 to-blue-300 shadow-lg shadow-slate-400 w-[90vw]  md:w-[70vw] rounded-3xl p-10 flex-col justify-center items-center mt-20"
+                initial={{ opacity: 0, y: 150 }} // Initial state
+                whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+                viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+                transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+                >
                     <div className="relative mx-10 md:mx-20 w-[80px] h-[80px] md:w-[120px] md:h-[120px]">
                         <Image 
                             alt="brand"
                             src={brand}
                             layout="fill"
-                            objectFit="contain"
+                            objectFit="contain" 
                         />
                     </div>
                     <div>
                         <p className="text-black text-center">{t("CompanyfullName")}</p>
                     </div>
-                </div>
+                </MotionDiv>
 
             </div>
             {/*  */}
-            <div className=" flex flex-col md:flex-row justify-center">
+            <MotionDiv 
+            className=" flex flex-col md:flex-row justify-center mt-12"
+            initial={{ opacity: 0, y: 150 }} // Initial state
+            whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+            viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+            transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+            >
                 {/* copyrights */}
                 <div className=" flex justify-center items-center mx-8">
                     <h1 className="mx-1 text-black/70">
@@ -52,14 +65,13 @@ export default function Footer() {
                     </h1>
                  </div>
                  
-                 
+                
+            </MotionDiv>
+            
+            <div>
+                 <h1>{t("location")}</h1>
             </div>
-            <div className=" flex justify-around items-center ">
-                <MdOutlineElectricBolt className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
-                <LuHousePlug className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 mx-4 text-gray-600" />
-                <MdElectricalServices className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
-                <TbCarFanFilled className="w-16 h-16 md:w-28 md:h-28 lg:w-36 lg:h-36 text-gray-600" />
-            </div>
+          
         </div>
     );
 }
