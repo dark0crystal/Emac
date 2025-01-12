@@ -5,7 +5,7 @@ export default function ContactUsButton(){
     return(
         <div>
             <div className="bg-blue-700/90 px-8 py-3 rounded-full">
-                <Link href="/about" className="text-xl text-white font-normal">{t("contactUs")}</Link>
+                <Link href="#contact-us" className="text-xl text-white font-normal">{t("contactUs")}</Link>
             </div>
         </div>
     )
