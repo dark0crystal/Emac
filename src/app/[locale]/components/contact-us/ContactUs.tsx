@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { MotionDiv } from "../MotionDiv";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"; // Import the resolver for Zod
+import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 const schema = z.object({
   email: z.string().email("Invalid email address"),
@@ -19,7 +20,6 @@ export default function ContactUs() {
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>({
     resolver: zodResolver(schema), // Use Zod schema for validation
@@ -34,7 +34,7 @@ export default function ContactUs() {
       <div className="flex flex-col">
         {/* Contact form */}
         <MotionDiv
-          className="flex items-center justify-center min-h-screen bg-gray-100"
+          className="flex items-center justify-center min-h-[60vh] "
           initial={{ opacity: 0, y: 150 }} // Initial state
           whileInView={{ opacity: 1, y: 0 }} // Animation while in view
           viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
@@ -90,18 +90,20 @@ export default function ContactUs() {
         </MotionDiv>
 
         {/* Social network links */}
-        <MotionDiv
-          className=""
-          initial={{ opacity: 0, y: 150 }} // Initial state
-          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
-          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
-          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+        <div
+          className="flex justify-center mt-6 h-[30vh]"
         >
-          {/* WhatsApp icon */}
-          <div></div>
-          {/* Phone number icon */}
-          <div></div>
-        </MotionDiv>
+          {/* WhatsApp Icon */}
+          <a
+            href="https://wa.me/1234567890" // Replace with your WhatsApp number
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-green-600 hover:text-green-800"
+          >
+            <FaWhatsapp size={30} />
+            <span className="text-2xl">{t("contactOnWhatsApp")}</span>
+          </a>
+        </div>
       </div>
     </div>
   );
