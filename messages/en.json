@@ -23,7 +23,10 @@
     "description":"The Electrical, Mechanical, and Air Conditioning Solutions Company offers comprehensive and high-quality services in the fields of design, installation, and maintenance. We are dedicated to meeting our clients' needs with the highest engineering standards to ensure efficiency and reliability. Our team of specialized engineers and technicians works diligently to provide innovative solutions tailored to each project. We are committed to using the latest technologies and materials to guarantee customer satisfaction and trust."
   },
   "our-projects":{
+
      "mainTitle":"Our Projects",
+     "cancel":"Back",
+
     "project1":{
       "title":"Air Conditioning installation work",
       "description":"projjjjjj1"
