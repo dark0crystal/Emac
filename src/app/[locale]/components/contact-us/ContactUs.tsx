@@ -51,7 +51,7 @@ export default function ContactUs() {
       <div className="flex justify-center items-center space-x-4">
         {/* WhatsApp Icon */}
         <a
-          href="https://wa.me/1234567890" // Replace with your WhatsApp number
+          href="https://wa.me/92280983" // Replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-green-600 hover:text-green-800"
