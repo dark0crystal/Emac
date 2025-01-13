@@ -26,7 +26,7 @@ export default function Footer() {
 
                
                 <div className="text-center">
-            <div className="flex justify-between  w-screen px-8 py-4" >
+            <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen px-8 py-4" >
                 <div className="flex flex-row gap-2 justify-center items-center">
                     <h1>{t("copyright")}</h1>
                     <h1>{t("companyName")}</h1>
