@@ -7,33 +7,34 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"; // Import the resolver for Zod
 import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
-const schema = z.object({
-  email: z.string().email("Invalid email address"),
-  emailSubject: z.string().min(8, "Subject must be at least 8 characters"),
-  emailText: z.string().min(20, "Message must be at least 20 characters"),
-});
+// const schema = z.object({
+//   email: z.string().email("Invalid email address"),
+//   emailSubject: z.string().min(8, "Subject must be at least 8 characters"),
+//   emailText: z.string().min(20, "Message must be at least 20 characters"),
+// });
 
-type FormFields = z.infer<typeof schema>;
+// type FormFields = z.infer<typeof schema>;
 
 export default function ContactUs() {
   const t = useTranslations("contact-us");
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<FormFields>({
-    resolver: zodResolver(schema), // Use Zod schema for validation
-  });
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors, isSubmitting },
+//   } = useForm<FormFields>({
+//     resolver: zodResolver(schema), // Use Zod schema for validation
+//   });
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data);
-  };
+//   const onSubmit: SubmitHandler<FormFields> = (data) => {
+//     console.log(data);
+//   };
 
   return (
     <div className="h-fit">
       <div className="flex flex-col">
         {/* Contact form */}
-        <MotionDiv
+
+        {/* <MotionDiv
           className="flex items-center justify-center min-h-[60vh] "
           initial={{ opacity: 0, y: 150 }} // Initial state
           whileInView={{ opacity: 1, y: 0 }} // Animation while in view
@@ -48,7 +49,7 @@ export default function ContactUs() {
               {t("title")}
             </h2>
 
-            {/* Email Field */}
+         
             <input
               {...register("email")}
               type="text"
@@ -59,7 +60,7 @@ export default function ContactUs() {
               <div className="text-red-400">{errors.email.message}</div>
             )}
 
-            {/* Subject Field */}
+        
             <input
               {...register("emailSubject")}
               type="text"
@@ -70,7 +71,7 @@ export default function ContactUs() {
               <div className="text-red-400">{errors.emailSubject.message}</div>
             )}
 
-            {/* Message Field */}
+        
             <textarea
               {...register("emailText")}
               placeholder={t("formPlaceHolders.text")}
@@ -87,7 +88,7 @@ export default function ContactUs() {
               {t("formLabels.submit")}
             </button>
           </form>
-        </MotionDiv>
+        </MotionDiv> */}
 
         {/* Social network links */}
         <div
