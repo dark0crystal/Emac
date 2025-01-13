@@ -15,20 +15,23 @@ export default function ContactUs() {
             {t("title")}
                 <span className="absolute -z-10 bottom-0 left-1/2 transform -translate-x-1/2 w-full h-4 md:h-5 bg-blue-400/40"></span>
             </h2>
-            </div>
+      </div>
+
+
+      <div className="flex flex-row gap-8 md:gap-32 justify-center items-center">
 
       {/* Contact Email */}
-      <div className="flex flex-row gap-1 justify-center items-center">
+      <div className="">
         <a
           href="https://mail.google.com/mail/?view=cm&to=emacsoman@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-lg font-medium text-blue-600 hover:text-blue-800"
         >
-          emacsoman@gmail.com
+        <div><Image src={gmailIcon} alt="gmail icon" height={70} width={75}/></div>
+
          
         </a>
-        <div><Image src={gmailIcon} alt="gmail icon" height={40} width={45}/></div>
       </div>
 
       {/* Social Network Links */}
@@ -40,9 +43,9 @@ export default function ContactUs() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-green-600 hover:text-green-800"
         >
-          <FaWhatsapp size={30} />
-          <span className="text-lg">{t("contactOnWhatsApp")}</span>
+          <FaWhatsapp size={50} />
         </a>
+      </div>
       </div>
     </div>
   );
