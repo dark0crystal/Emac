@@ -25,7 +25,13 @@ export default function ContactUs() {
       </MotionDiv>
 
 
-      <div className="flex flex-row gap-8 md:gap-32 justify-center items-center">
+      <MotionDiv
+       className="flex flex-row gap-8 md:gap-32 justify-center items-center"
+       initial={{ opacity: 0, y: 150 }} // Initial state
+            whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+            viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+            transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+       >
 
       {/* Contact Email */}
       <div className="">
@@ -53,7 +59,7 @@ export default function ContactUs() {
           <FaWhatsapp size={50} />
         </a>
       </div>
-      </div>
+      </MotionDiv>
     </div>
   );
 }
