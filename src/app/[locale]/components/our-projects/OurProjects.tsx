@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import img1 from "../../../../../public/img1.jpg";
-import img2 from "../../../../../public/img2.jpg";
-import img3 from "../../../../../public/img3.jpg";
-import img4 from "../../../../../public/img4.jpg";
+import img1 from "../../../../../public/img6.jpg";
+import img2 from "../../../../../public/img7.jpg";
+import img3 from "../../../../../public/img8.jpg";
+import img4 from "../../../../../public/img9.jpg";
 import { useTranslations } from "next-intl";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -32,13 +32,13 @@ export default function OurProjects() {
       id: 2,
       title: t("project2.title"),
       description: t("project2.description"),
-      image: img4,
+      image: img1,
     },
     {
       id: 3,
       title: t("project3.title"),
       description: t("project3.description"),
-      image: img1,
+      image: img4,
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ export default function OurProjects() {
               className="absolute bottom-4 z-20 right-4 bg-red-500 text-white rounded-full px-4 py-2"
               onClick={() => setSelectedProject(null)}
             >
-              Cancel
+             {t("cancel")}
             </button>
             <div className="p-6">
               <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
