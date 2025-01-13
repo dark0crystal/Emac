@@ -1,8 +1,8 @@
 {
   "HomePage": {
-    "title": "Hello world!",
+    "title": "Electrical, Mechanical, and Air Conditioning Solutions Company",
     "contactUs":"contact us",
-    "titleParagraph":"ِExperienced in fixing Air Conditions "
+   "titleParagraph": "We offer you exceptional services in air conditioner repair and installation, as well as executing electrical works with the highest standards of quality and professionalism."
   },
   "cards": {
     "card1": {
@@ -20,7 +20,7 @@
   },
   "about": {
     "title":"About Us",
-    "description":"شركة الحلول الكهربائية و الميكانيكية و تكييف الهواء"
+    "description":"The Electrical, Mechanical, and Air Conditioning Solutions Company offers comprehensive and high-quality services in the fields of design, installation, and maintenance. We are dedicated to meeting our clients' needs with the highest engineering standards to ensure efficiency and reliability. Our team of specialized engineers and technicians works diligently to provide innovative solutions tailored to each project. We are committed to using the latest technologies and materials to guarantee customer satisfaction and trust."
   },
   "our-projects":{
      "mainTitle":"Our Projects",
