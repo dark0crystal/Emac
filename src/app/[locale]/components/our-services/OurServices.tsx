@@ -4,6 +4,7 @@ import img2 from "../../../../../public/img2.jpg";
 import img3 from "../../../../../public/img3.jpg";
 import img4 from "../../../../../public/img4.jpg";
 import img5 from "../../../../../public/img5.jpg";
+import img6 from "../../../../../public/img6.jpg";
 import { useTranslations } from "next-intl";
 import { MotionDiv } from "../MotionDiv";
 
@@ -11,7 +12,7 @@ export default function OurServices() {
     const t = useTranslations("our-services")
     const services = [
         { title: t("our-services-cards.card1.title"), description: t("our-services-cards.card1.description"), img: img5 },
-        { title: t("our-services-cards.card2.title"), description: t("our-services-cards.card2.description"), img: img4 },
+        { title: t("our-services-cards.card2.title"), description: t("our-services-cards.card2.description"), img: img6 },
         { title: t("our-services-cards.card3.title"), description: t("our-services-cards.card3.description"), img: img1 },
     ];
 
