@@ -32,7 +32,7 @@ export default function Footer() {
                 <div className="text-center">
             <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen px-8 py-4" >
                 <div className="flex flex-row gap-2 justify-center items-center">
-                    <h1>{t("copyright")}</h1>
+                    <h1 className="text-white/70">{t("copyright")}</h1>
                     <h1>{t("companyName")}</h1>
                 </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
                <div className="flex flex-row gap-2 justify-center items-center mt-4 md:mt-0">
                 
-                    <h1>{t("designedBy")}</h1>
+                    <h1 className="text-white/70">{t("designedBy")}</h1>
                     <a className="text-cyan-600" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/_5lo_9/">{t("designerName")}</a>
                 </div>
             </div>
