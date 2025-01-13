@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import brand from "../../../../public/logo.png";
+import { FaWhatsapp } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 export default function Footer() {
     const t = useTranslations("footer");
@@ -22,34 +24,40 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Time and Location */}
-                <div className="text-center">
-                    <p className="text-sm">
-                        {t("time")} - {t("day")} {t("date")}
-                    </p>
-                    <p className="text-sm">{t("location")}</p>
-                </div>
-
-                {/* Social Icons */}
-                <div className="flex space-x-4">
-                    <button className="bg-white text-black rounded-full p-2">
-                        X
-                    </button>
-                    <button className="bg-white text-black rounded-full p-2">
-                        in
-                    </button>
-                </div>
-
                 {/* Footer Bottom */}
-                <div className="text-sm text-center mt-4 border-t border-white/20 pt-4 w-full">
-                    <p>
-                        © 2024{" "}
-                        <span className="font-bold">{t("designerName")}</span>.{" "}
-                        {t("madeWithPride")}{" "}
-                        <span className="font-bold">{t("frameworkName")}</span>.
-                    </p>
-                </div>
+                <div className="text-center">
+            <div className="flex flex-row gap-4 justify-center items-center" >
+
+                    {/* Contact Email */}
+                    <div className="">
+                        <a
+                        href="https://mail.google.com/mail/?view=cm&to=emacsoman@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg font-medium text-gray-400 hover:text-blue-800"
+                        >
+                    
+                        <BiLogoGmail size={50}/>
+
+                        
+                            </a>
+                    </div>
+
+                        {/* Social Network Links */}
+                        <div className="flex justify-center items-center space-x-4">
+                            {/* WhatsApp Icon */}
+                            <a
+                            href="https://wa.me/1234567890" // Replace with your WhatsApp number
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-400 hover:text-green-800"
+                            >
+                            <FaWhatsapp size={50} />
+                            </a>
+                        </div>
             </div>
-        </footer>
+        </div>
+        </div>
+    </footer>
     );
 }
