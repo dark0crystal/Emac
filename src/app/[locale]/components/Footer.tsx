@@ -3,6 +3,7 @@ import Image from "next/image";
 import brand from "../../../../public/logo.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import Link from "next/link";
 
 export default function Footer() {
     const t = useTranslations("footer");
@@ -11,7 +12,7 @@ export default function Footer() {
         <footer className="bg-sky-950 text-white py-6">
             <div className="container mx-auto flex flex-col items-center space-y-4">
                 {/* Profile and Title */}
-                <div className="flex flex-col items-center justify-center space-x-4 bg-white rounded-3xl h-[20vh] w-[90vw] md:w-[70vw]">
+                <div className="flex flex-col items-center justify-center space-x-4 bg-blue-100 rounded-3xl h-[20vh] w-[90vw] md:w-[70vw]">
                     <Image
                         src={brand}
                         alt="Profile Picture"
@@ -23,15 +24,22 @@ export default function Footer() {
                         <p className="text-sm md:text-lg text-center text-black mt-2">{t("CompanyfullName")}</p>
                     </div>
                 </div>
+                <div className="">
 
-               
+                </div>
+
+               <div className="bg-slate-600 h-[1px] w-screen"/>
                 <div className="text-center">
             <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen px-8 py-4" >
                 <div className="flex flex-row gap-2 justify-center items-center">
                     <h1>{t("copyright")}</h1>
                     <h1>{t("companyName")}</h1>
                 </div>
-                <div className="flex flex-row gap-4 justify-center items-center">
+
+                {/*  */}
+               
+
+                <div className="flex flex-row gap-4 justify-center items-center mt-2 md:mt-0">
                    
                     {/* Contact Email */}
                     <div >
@@ -59,6 +67,13 @@ export default function Footer() {
                             </a>
                         </div>
                </div>
+
+
+               <div className="flex flex-row gap-2 justify-center items-center mt-4 md:mt-0">
+                
+                    <h1>{t("designedBy")}</h1>
+                    <a className="text-cyan-600" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/_5lo_9/">{t("designerName")}</a>
+                </div>
             </div>
         </div>
         </div>
