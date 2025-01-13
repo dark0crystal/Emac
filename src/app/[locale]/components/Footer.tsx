@@ -24,12 +24,17 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Footer Bottom */}
+               
                 <div className="text-center">
-            <div className="flex flex-row gap-4 justify-center items-center" >
-
+            <div className="flex justify-between  w-screen px-8 py-4" >
+                <div className="flex flex-row gap-2 justify-center items-center">
+                    <h1>{t("copyright")}</h1>
+                    <h1>{t("companyName")}</h1>
+                </div>
+                <div className="flex flex-row gap-4 justify-center items-center">
+                   
                     {/* Contact Email */}
-                    <div className="">
+                    <div >
                         <a
                         href="https://mail.google.com/mail/?view=cm&to=emacsoman@gmail.com"
                         target="_blank"
@@ -37,9 +42,7 @@ export default function Footer() {
                         className="text-lg font-medium text-gray-400 hover:text-blue-800"
                         >
                     
-                        <BiLogoGmail size={50}/>
-
-                        
+                        <BiLogoGmail size={35}/>  
                             </a>
                     </div>
 
@@ -52,9 +55,10 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 text-gray-400 hover:text-green-800"
                             >
-                            <FaWhatsapp size={50} />
+                            <FaWhatsapp size={35} />
                             </a>
                         </div>
+               </div>
             </div>
         </div>
         </div>
