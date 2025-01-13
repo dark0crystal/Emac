@@ -6,20 +6,19 @@ export default function Footer() {
     const t = useTranslations("footer");
 
     return (
-        <footer className="bg-black text-white py-6">
+        <footer className="bg-sky-950 text-white py-6">
             <div className="container mx-auto flex flex-col items-center space-y-4">
                 {/* Profile and Title */}
-                <div className="flex items-center space-x-4">
+                <div className="flex flex-col items-center justify-center space-x-4 bg-white rounded-3xl h-[20vh] w-[90vw] md:w-[70vw]">
                     <Image
                         src={brand}
                         alt="Profile Picture"
-                        width={40}
-                        height={40}
+                        width={60}
+                        height={60}
                         className="rounded-full"
                     />
                     <div>
-                        <h2 className="text-lg font-bold">{t("designerName")}</h2>
-                        <p className="text-sm">{t("jobTitle")}</p>
+                        <p className="text-sm md:text-lg text-center text-black mt-2">{t("CompanyfullName")}</p>
                     </div>
                 </div>
 
