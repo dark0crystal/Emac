@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import img1 from "../../../../../public/img1.jpeg";
 import img2 from "../../../../../public/img2.jpeg";
 import img3 from "../../../../../public/img3.jpeg";
@@ -9,13 +9,19 @@ import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
 import { MotionDiv } from "../MotionDiv";
 
-
+// Define the type for a project
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: StaticImageData;
+};
 
 export default function OurProjects() {
   const t = useTranslations("our-projects");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null); // Explicitly type the state
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: t("project1.title"),
@@ -51,12 +57,12 @@ export default function OurProjects() {
 
       {selectedProject ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <MotionDiv 
-          className="bg-white rounded-3xl max-w-xl md:max-w-3xl lg:max-w-5xl min-h-[500px] md:min-h-[450px] grid-rows-2 grid md:grid-rows-1 md:grid-cols-2 w-full relative shadow-lg overflow-hidden"
-          initial={{ opacity: 0, y: 150 }} // Initial state
-          whileInView={{ opacity: 1, y: 0 }} // Animation while in view
-          viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
-          transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+          <MotionDiv
+            className="bg-white rounded-3xl max-w-xl md:max-w-3xl lg:max-w-5xl min-h-[500px] md:min-h-[450px] grid-rows-2 grid md:grid-rows-1 md:grid-cols-2 w-full relative shadow-lg overflow-hidden"
+            initial={{ opacity: 0, y: 150 }} // Initial state
+            whileInView={{ opacity: 1, y: 0 }} // Animation while in view
+            viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% in view
+            transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
           >
             <button
               className="absolute bottom-4 z-20 right-4 bg-red-500 text-white rounded-full px-4 py-2"
