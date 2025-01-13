@@ -26,25 +26,25 @@ export default function OurProjects() {
       id: 1,
       title: t("project1.title"),
       description: t("project1.description"),
-      image: img1,
+      image: img2,
     },
     {
       id: 2,
       title: t("project2.title"),
       description: t("project2.description"),
-      image: img2,
+      image: img4,
     },
     {
       id: 3,
       title: t("project3.title"),
       description: t("project3.description"),
-      image: img3,
+      image: img1,
     },
     {
       id: 4,
       title: t("project4.title"),
       description: t("project4.description"),
-      image: img4,
+      image: img3,
     },
   ];
 
