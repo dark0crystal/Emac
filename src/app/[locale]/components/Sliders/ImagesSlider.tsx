@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { motion, useMotionValue, animate } from "framer-motion";
-import img1 from "../../../../../public/img1.jpeg";
-import img2 from "../../../../../public/img2.jpeg";
-import img3 from "../../../../../public/img3.jpeg";
-import img4 from "../../../../../public/img4.jpeg";
-import img5 from "../../../../../public/img5.jpeg";
+import img1 from "../../../../../public/img1.jpg";
+import img2 from "../../../../../public/img2.jpg";
+import img3 from "../../../../../public/img3.jpg";
+import img4 from "../../../../../public/img4.jpg";
+import img5 from "../../../../../public/img5.jpg";
 import useMeasure from "react-use-measure";
 import { useEffect } from "react";
 

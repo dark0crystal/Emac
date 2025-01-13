@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import img1 from "../../../../../public/img1.jpeg";
-import img2 from "../../../../../public/img2.jpeg";
-import img3 from "../../../../../public/img3.jpeg";
-import img4 from "../../../../../public/img4.jpeg";
+import img1 from "../../../../../public/img1.jpg";
+import img2 from "../../../../../public/img2.jpg";
+import img3 from "../../../../../public/img3.jpg";
+import img4 from "../../../../../public/img4.jpg";
 import { useTranslations } from "next-intl";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
